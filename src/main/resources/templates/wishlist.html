@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>WishList Page | Contact Manager</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top_menu {
+  overflow: hidden;
+  background-color: #292c2f;
+}
+
+.top_menu a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.top_menu a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.top_menu a.active {
+  background-color: #2eb8b8;
+  color: white;
+}
+
+.top_menu .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .top_menu a:not(:first-child) {display: none;}
+  .top_menu a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .top_menu.responsive {position: relative;}
+  .top_menu.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .top_menu.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.footer {
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 45px 50px;
+}
+
+.footer .footer-left p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+
+.footer a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
+.footer .footer-links a:before {
+  content: "|";
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer .footer-links .link-1:before {
+  content: none;
+}
+
+.footer .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+
+.footer .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+@media (max-width: 600px) {
+  .footer .footer-left, .footer .footer-right {
+    text-align: center;
+  }
+  .footer .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer .footer-left p.footer-links {
+    line-height: 1.8;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover
+{
+  color: #2eb8b8;
+  text-decoration:none;
+}
+</style>
+</head>
+<body>
+	<div class="top_menu" id="top_menu">
+		<a href="/"><i class="fas fa-house-user"></i> Home</a>
+		<a href="/list"><i class="fas fa-address-book"></i> Contacts List</a>
+		<a href="/new"><i class="fas fa-user-plus"></i> New Contact</a>
+		<a href="https://github.com/diminaso-uowm/contact-manager/commits/dev" target="_blank"><i class="fas fa-clipboard-list"></i> ChangeLog</a>
+		<a href="/wishlist" class="active"><i class="far fa-lightbulb"></i> WishList</a>
+		<a href="/about"><i class="fas fa-info-circle"></i> About</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</div>
+	<div style="padding-left:16px">
+		<h2>WishList - Contact Manager</h2>
+		<p>In this page you can see our future wishlist additions.</p>
+		<p>
+			<ul>
+			<li>User accounts with passwords</li>
+			<li>Export contacts as Excel & CSV</li>
+			<li>Contacts list ordering</li>
+			<li>Bootstrap for Client</li>
+			<li>More contacts fields (upload files, categories, grouping)</li>
+			</ul>
+		</p>
+	</div>
+	<script>
+		function myFunction() {
+		var x = document.getElementById("top_menu");
+		if (x.className === "top_menu") {
+			x.className += " responsive";
+			} else {
+			x.className = "top_menu"
+		}
+	}
+	</script>
+	<footer class="footer">
+		<div class="footer-right">
+			<a href="https://www.github.com/diminaso-uowm/contact-manager-web" title="GitHub", alt="GitHub"><i class="fab fa-github"></i></a>
+			<a href="https://cs.uowm.gr" title="Department of Informatics, University of Western Macedonia, Greece", alt="Department of Informatics, University of Western Macedonia, Greece" target="_blank"><i class="fas fa-university"></i></a>
+			<a href="mailto:dimitris@nasoufis.com" title="Contact Developer with E-mail", alt="Contact Developer with E-mail"><i class="far fa-envelope"></i></a>
+			<a href="/about" title="Creative Commons Information", alt="Creative Commons Information"><i class="fab fa-creative-commons"></i></a>
+		</div>
+		<div class="footer-left">
+			<p class="footer-links">
+				<a class="link-1" href="https://github.com/diminaso-uowm/contact-manager/commits/dev" target="_blank">ChangeLog</a>
+				<a href="/wishlist">WishList</a>
+				<a href="/about">About</a>
+			</p>
+			<p>
+				&copy; Copyright 2020, <a href="/">Contact Manager</a>. All rights reserved. Powered by <a href="https://www.nasoufis.com" target="_blank">Dimitrios Nasoufis</a>.
+			</p>
+		</div>
+	</footer>
+</body>
+</html>
